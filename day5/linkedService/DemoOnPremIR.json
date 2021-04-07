@@ -1,0 +1,17 @@
+{
+	"name": "DemoOnPremIR",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=SIYAHI\\SITADEVI;initial catalog=AdventureWorksDW2012",
+			"userName": "SIYAHI\\Dell",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlMDdmYjBjZS00MTZlLTQ4YzUtYTI5Ni0xZDk5NTMzNjdjMzAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "siyazIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"name": "CustomerSink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageDest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "mydata"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

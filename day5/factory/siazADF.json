@@ -1,0 +1,9 @@
+{
+	"name": "siazADF",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8aa8f687-27f2-4efe-941d-d581b65f8456",
+		"tenantId": "fa580163-8101-479c-8e41-1016a261f011"
+	}
+}

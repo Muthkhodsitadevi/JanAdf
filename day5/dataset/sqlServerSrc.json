@@ -1,0 +1,37 @@
+{
+	"name": "sqlServerSrc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OnPremLS",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"ServerName": "SIYAHI\\SITADEVI",
+				"DatabaseName": "AdventureWorksDW2012",
+				"UserName": "SIYAHI\\Dell",
+				"Password": "Enter123"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "CurrencyKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CurrencyAlternateKey",
+				"type": "nchar"
+			},
+			{
+				"name": "CurrencyName",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DimCurrency"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

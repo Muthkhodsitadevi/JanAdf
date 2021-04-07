@@ -1,0 +1,32 @@
+{
+	"name": "SalesSink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageDest",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"cw_filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().cw_filename",
+					"type": "Expression"
+				},
+				"container": "mydata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

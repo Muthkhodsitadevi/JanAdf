@@ -1,0 +1,35 @@
+{
+	"name": "OnPremLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"ServerName": {
+				"type": "String",
+				"defaultValue": "SIYAHI\\SITADEVI"
+			},
+			"DatabaseName": {
+				"type": "String",
+				"defaultValue": "AdventureWorksDW2012"
+			},
+			"UserName": {
+				"type": "String",
+				"defaultValue": "SIYAHI\\Dell"
+			},
+			"Password": {
+				"type": "String",
+				"defaultValue": "Enter123"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=True;Data Source=@{linkedService().ServerName};Initial Catalog=@{linkedService().DatabaseName}",
+			"userName": "@{linkedService().UserName}",
+			"password": "@{linkedService().Password}"
+		},
+		"connectVia": {
+			"referenceName": "siyazIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
